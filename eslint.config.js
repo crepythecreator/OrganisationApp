@@ -1,27 +1,21 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import importX from 'eslint-plugin-import-x'
-import simpleImportSort from 'eslint-plugin-simple-import-sort'
-import boundaries from 'eslint-plugin-boundaries'
-import tseslint from 'typescript-eslint'
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import importX from 'eslint-plugin-import-x';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import boundaries from 'eslint-plugin-boundaries';
+import tseslint from 'typescript-eslint';
 
-import { defineConfig, globalIgnores } from 'eslint/config'
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
   // ============================================================
   // GLOBAL IGNORES
   // ============================================================
 
-  globalIgnores([
-    'dist/**',
-    'node_modules/**',
-    'coverage/**',
-    '.vite/**',
-    'public/**',
-  ]),
+  globalIgnores(['dist/**', 'node_modules/**', 'coverage/**', '.vite/**', 'public/**']),
 
   // ============================================================
   // TYPESCRIPT + REACT
@@ -150,12 +144,7 @@ export default defineConfig([
        * - dynamic imports
        */
 
-      'boundaries/dependency-nodes': [
-        'import',
-        'export',
-        'require',
-        'dynamic-import',
-      ],
+      'boundaries/dependency-nodes': ['import', 'export', 'require', 'dynamic-import'],
     },
 
     rules: {
@@ -191,10 +180,7 @@ export default defineConfig([
         },
       ],
 
-      '@typescript-eslint/consistent-type-definitions': [
-        'error',
-        'type',
-      ],
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
 
       '@typescript-eslint/no-floating-promises': 'error',
 
@@ -270,10 +256,7 @@ export default defineConfig([
 
       'react/self-closing-comp': 'error',
 
-      'react/jsx-boolean-value': [
-        'error',
-        'never',
-      ],
+      'react/jsx-boolean-value': ['error', 'never'],
 
       'react/jsx-curly-brace-presence': [
         'error',
@@ -312,81 +295,55 @@ export default defineConfig([
        */
 
       'boundaries/element-types': [
-  'error',
-  {
-    default: 'disallow',
+        'error',
+        {
+          default: 'disallow',
 
-    rules: [
-      // shared
-      {
-        from: 'shared',
-        allow: ['shared'],
-      },
+          rules: [
+            // shared
+            {
+              from: 'shared',
+              allow: ['shared'],
+            },
 
-      // entities → entities, shared
-      {
-        from: 'entities',
-        allow: ['entities', 'shared'],
-      },
+            // entities → entities, shared
+            {
+              from: 'entities',
+              allow: ['entities', 'shared'],
+            },
 
-      // features → features, entities, shared
-      {
-        from: 'features',
-        allow: ['features', 'entities', 'shared'],
-      },
+            // features → features, entities, shared
+            {
+              from: 'features',
+              allow: ['features', 'entities', 'shared'],
+            },
 
-      // widgets → widgets, features, entities, shared
-      {
-        from: 'widgets',
-        allow: [
-          'widgets',
-          'features',
-          'entities',
-          'shared',
-        ],
-      },
+            // widgets → widgets, features, entities, shared
+            {
+              from: 'widgets',
+              allow: ['widgets', 'features', 'entities', 'shared'],
+            },
 
-      // pages → pages, widgets, features, entities, shared
-      {
-        from: 'pages',
-        allow: [
-          'pages',
-          'widgets',
-          'features',
-          'entities',
-          'shared',
-        ],
-      },
+            // pages → pages, widgets, features, entities, shared
+            {
+              from: 'pages',
+              allow: ['pages', 'widgets', 'features', 'entities', 'shared'],
+            },
 
-      // app → everything
-      {
-        from: 'app',
-        allow: [
-          'app',
-          'pages',
-          'widgets',
-          'features',
-          'entities',
-          'shared',
-        ],
-      },
+            // app → everything
+            {
+              from: 'app',
+              allow: ['app', 'pages', 'widgets', 'features', 'entities', 'shared'],
+            },
 
-      // stories → everything
-      {
-        from: 'stories',
-        allow: [
-          'stories',
-          'app',
-          'pages',
-          'widgets',
-          'features',
-          'entities',
-          'shared',
-        ],
-      },
-    ],
-  },
-],
+            // stories → everything
+            {
+              from: 'stories',
+              allow: ['stories', 'app', 'pages', 'widgets', 'features', 'entities', 'shared'],
+            },
+          ],
+        },
+      ],
     },
   },
 
@@ -395,15 +352,9 @@ export default defineConfig([
   // ============================================================
 
   {
-    files: [
-      '**/*.config.js',
-      '**/*.config.mjs',
-      '**/*.config.cjs',
-    ],
+    files: ['**/*.config.js', '**/*.config.mjs', '**/*.config.cjs'],
 
-    extends: [
-      tseslint.configs.disableTypeChecked,
-    ],
+    extends: [tseslint.configs.disableTypeChecked],
 
     languageOptions: {
       globals: {
@@ -417,10 +368,7 @@ export default defineConfig([
   // ============================================================
 
   {
-    files: [
-      '**/*.test.{ts,tsx}',
-      '**/*.spec.{ts,tsx}',
-    ],
+    files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
 
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
@@ -428,4 +376,4 @@ export default defineConfig([
       'react-refresh/only-export-components': 'off',
     },
   },
-])
+]);
