@@ -1,19 +1,15 @@
-
-
 .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
   color: var(--accent);
-  background: black;
+  background: var(--accent-bg);
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px;
-  font-family: var(--common-font);
-  font-weight: 600;
 
   &:hover {
-    border-color: red;
+    border-color: var(--accent-border);
   }
   &:focus-visible {
     outline: 2px solid var(--accent);
@@ -46,7 +42,8 @@
     z-index: 1;
     top: 34px;
     height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1.4);
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
   }
 
   .vite {
@@ -54,7 +51,8 @@
     top: 107px;
     height: 26px;
     width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
   }
 }
 
