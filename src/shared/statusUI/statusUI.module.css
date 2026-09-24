@@ -1,0 +1,72 @@
+.status {
+  padding: 5px 8px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  width: fit-content;
+  align-items: center;
+  gap: 5px;
+}
+
+.Published {
+  border: 1px solid var(--success-color);
+  background-color: #E2F2E9;
+  color: var(--success-color);
+}
+
+.Draft {
+  border: 1px solid var(--warn-color);
+  background-color: #FFF0D2;
+  color: var(--warn-color);
+}
+
+.Review {
+  border: 1px solid var(--blue-color);
+  background-color: #E8ECFF;
+  color: var(--blue-color);
+}
+
+.SoldOut {
+  border: 1px solid var(--orange-color);
+  background-color: #FFE6E2;
+  color: var(--orange-color);
+}
+
+.Finished {
+  border: 1px solid var(--black-color);
+  background-color: #F6F6F2;
+  color: var(--black-color);
+}
+
+.circlePublished {
+  background-color: var(--success-color);
+}
+
+.circleDraft {
+  background-color: var(--warn-color);
+}
+
+.circleReview {
+  background-color: var(--blue-color);
+}
+
+.circleSoldOut {
+  background-color: var(--orange-color);
+}
+
+.circleFinished {
+  background-color: var(--black-color);
+}
+
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 9px;
+  font-family: var(--common-font);
+  font-weight: bold;
+}
