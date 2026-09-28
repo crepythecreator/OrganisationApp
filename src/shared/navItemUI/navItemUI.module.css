@@ -14,8 +14,13 @@
   opacity: .9;
 }
 
+.index {
+  color: #777773;
+}
+
 .active {
   background-color: var(--blue-color);
+  color: var(--white-color);
 }
 
 .content {

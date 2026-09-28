@@ -13,7 +13,7 @@ export type INavItemUIProps = {
 export default function NavItemUI ({path, count, index, title}: INavItemUIProps) {
   return (
     <NavLink className={({ isActive }) => clsx(style.main, {[style.active]: isActive })} to={`/${path ?? ''}`} key={index}>
-      <span className={style.active}>{'0'+index}</span>
+      <span className={style.index}>{'0'+index}</span>
       <div className={style.content}>
         <span>{title}</span>
         <span>{count ?? ''}</span>
