@@ -1,0 +1,30 @@
+.main{
+  font-family: var(--common-font);
+  font-weight: 700;
+}
+
+.title {
+  position: absolute;
+  top: 8px;
+  font-size: 9px;
+  left: 12px;
+  color: #777773;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.select {
+  position: relative;
+  width: 100%;
+  font-size: 12px;
+  background-color: var(--white-color);
+  padding: 0px 8px;
+  border: #B7B7B1 1px solid;
+  height: 54px;
+  transition: opacity .3s ease;
+}
+
+.select:focus-visible {
+  outline: none;
+  opacity: .9;
+}
