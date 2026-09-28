@@ -1,13 +1,15 @@
 import './variables.css';
 import './normalize.css';
 
+import { Route, Routes } from 'react-router-dom';
+
 import style from './App.module.css';
 
 function App() {
   return (
-    <div className={style.button}>
-      <div className={style.counter__title}>51</div>
-    </div>
+    <Routes>
+      <Route path='/' element={<div />} />
+    </Routes>
   );
 }
 

@@ -1,0 +1,25 @@
+.main {
+  width: 190px;
+  padding: 14px 12px;
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--white-color);
+  font-family: var(--common-font);
+  font-weight: 700;
+  transition: opacity .3s ease;
+}
+
+.main:hover {
+  opacity: .9;
+}
+
+.active {
+  background-color: var(--blue-color);
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
